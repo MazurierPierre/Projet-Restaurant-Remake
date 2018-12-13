@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model
+namespace Model.Kitchen.Equipment
 {
-    class Class1
+    public class Oven : Equipments
     {
+        public Oven(string name) : base(name)
+        {
+
+        }
     }
 }
