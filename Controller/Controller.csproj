@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clock\Clock.cs" />
     <Compile Include="Common\Actor.cs" />
     <Compile Include="Common\AssignTable.cs" />
     <Compile Include="Common\AuthorizeOrder.cs" />
@@ -69,7 +70,21 @@
     <Compile Include="Common\VerifyReservation.cs" />
     <Compile Include="Interfaces\IAct.cs" />
     <Compile Include="Interfaces\IActor.cs" />
+    <Compile Include="Interfaces\IClock.cs" />
+    <Compile Include="Kitchen\Cook.cs" />
+    <Compile Include="Kitchen\Dishwasher.cs" />
+    <Compile Include="Kitchen\KitchenActorList.cs" />
+    <Compile Include="Kitchen\KitchenClerk.cs" />
+    <Compile Include="Kitchen\MainChef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Room\BookingList.cs" />
+    <Compile Include="Room\Butler.cs" />
+    <Compile Include="Room\Client.cs" />
+    <Compile Include="Room\ClientQueue.cs" />
+    <Compile Include="Room\HeadWaiter.cs" />
+    <Compile Include="Room\RoomActorList.cs" />
+    <Compile Include="Room\RoomClerk.cs" />
+    <Compile Include="Room\Waiter.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
