@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "Projet-Restaurant-Remake\View.csproj", "{7C7E4609-3320-4A81-8B1B-D2CFE7E52787}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "View\View.csproj", "{7C7E4609-3320-4A81-8B1B-D2CFE7E52787}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAO\DAL.csproj", "{A2D6ADE7-7607-4103-A0DF-7D34DDA1EA6C}"
 EndProject
