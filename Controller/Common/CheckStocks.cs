@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Controller.Common
 {
-    class CheckSotcks
+    class CheckStocks
     {
     }
 }

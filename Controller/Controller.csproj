@@ -41,16 +41,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Actor.cs" />
+    <Compile Include="Common\AssignTable.cs" />
+    <Compile Include="Common\AuthorizeOrder.cs" />
     <Compile Include="Common\BringBread.cs" />
     <Compile Include="Common\BringJug.cs" />
     <Compile Include="Common\BringMealToCounter.cs" />
     <Compile Include="Common\BringMenu.cs" />
+    <Compile Include="Common\CheckStocks.cs" />
+    <Compile Include="Common\ChopVegetables.cs" />
+    <Compile Include="Common\CleanKitchen.cs" />
+    <Compile Include="Common\CleanKitchenware.cs" />
+    <Compile Include="Common\CleanRoomware.cs" />
     <Compile Include="Common\CleanTable.cs" />
     <Compile Include="Common\Eat.cs" />
+    <Compile Include="Common\FillStocks.cs" />
+    <Compile Include="Common\FindDishSimilarities.cs" />
+    <Compile Include="Common\IsDishAchievable.cs" />
     <Compile Include="Common\OrderAction.cs" />
     <Compile Include="Common\Pay.cs" />
     <Compile Include="Common\PlaceClient.cs" />
+    <Compile Include="Common\PrepareDish.cs" />
+    <Compile Include="Common\PrepareMorningDish.cs" />
+    <Compile Include="Common\RefuseOrder.cs" />
+    <Compile Include="Common\RemoveFromStocks.cs" />
     <Compile Include="Common\Serve.cs" />
+    <Compile Include="Common\TakeOrder.cs" />
     <Compile Include="Common\VerifyReservation.cs" />
     <Compile Include="Interfaces\IAct.cs" />
     <Compile Include="Interfaces\IActor.cs" />
