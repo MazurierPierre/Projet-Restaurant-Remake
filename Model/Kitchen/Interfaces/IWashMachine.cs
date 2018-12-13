@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Kitchen
+namespace Model.Kitchen.Interfaces
 {
-    class QueueRoomTools
+    public interface IWashMachine
     {
+        void wash();
+        void threadStart();
     }
 }

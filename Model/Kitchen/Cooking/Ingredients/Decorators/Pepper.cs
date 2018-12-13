@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Model.Kitchen.Cooking
 {
-    class Pepper
+    public class Pepper : DishDecorator
     {
+        public Pepper(Dish originalDish) : base(originalDish)
+        {
+            this.description += ", with pepper";
+        }
     }
 }

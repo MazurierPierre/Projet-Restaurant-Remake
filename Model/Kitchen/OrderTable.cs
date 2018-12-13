@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Model.Kitchen
 {
-    class OrderTable
+    public class OrderTable
     {
+        //public List<Order>
+        public int tableNumber { get; set; }
+
+        //Will be completed after "Order" created in "Room"
     }
 }

@@ -40,7 +40,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Kitchen\Communication.cs" />
+    <Compile Include="Kitchen\Cooking\Ingredients\Decorators\Cream.cs" />
+    <Compile Include="Kitchen\Cooking\Dish.cs" />
+    <Compile Include="Kitchen\Cooking\Ingredients\Decorators\DishDecorator.cs" />
+    <Compile Include="Kitchen\Cooking\Ingredients\Ingredient.cs" />
+    <Compile Include="Kitchen\Cooking\Instructions.cs" />
+    <Compile Include="Kitchen\Cooking\KitchenTool.cs" />
+    <Compile Include="Kitchen\Cooking\KitchenAction.cs" />
+    <Compile Include="Kitchen\Cooking\Menu.cs" />
+    <Compile Include="Kitchen\Cooking\Ingredients\Decorators\Pepper.cs" />
+    <Compile Include="Kitchen\Cooking\Ingredients\Decorators\Salt.cs" />
+    <Compile Include="Kitchen\Counter.cs" />
+    <Compile Include="Kitchen\Cooking\Equipment\Equipments.cs" />
+    <Compile Include="Kitchen\Cooking\Equipment\Concrete\KitchenFire.cs" />
+    <Compile Include="Kitchen\Cooking\Equipment\Concrete\Oven.cs" />
+    <Compile Include="Kitchen\Enumerations\EnumKitchen.cs" />
+    <Compile Include="Kitchen\InitKitchen.cs" />
+    <Compile Include="Kitchen\Interfaces\IStorage.cs" />
+    <Compile Include="Kitchen\Interfaces\IWashingKitchenTools.cs" />
+    <Compile Include="Kitchen\Interfaces\IWashingRoomTools.cs" />
+    <Compile Include="Kitchen\Interfaces\IWashMachine.cs" />
+    <Compile Include="Kitchen\Kitchen.cs" />
+    <Compile Include="Kitchen\OrderTable.cs" />
+    <Compile Include="Kitchen\Storage\Concrete\Freezer.cs" />
+    <Compile Include="Kitchen\Storage\Concrete\Fridge.cs" />
+    <Compile Include="Kitchen\Storage\Storage.cs" />
+    <Compile Include="Kitchen\Storage\Concrete\Supply.cs" />
+    <Compile Include="Kitchen\Wash\Machines\Concrete\DishwasherMachine.cs" />
+    <Compile Include="Kitchen\Wash\Machines\Concrete\Sink.cs" />
+    <Compile Include="Kitchen\Wash\Machines\Abstract\WashingKitchenTools.cs" />
+    <Compile Include="Kitchen\Wash\Machines\Concrete\WashingMachine.cs" />
+    <Compile Include="Kitchen\Wash\Machines\Abstract\WashingRoomStuff.cs" />
+    <Compile Include="Kitchen\Wash\Machines\Abstract\WashMachine.cs" />
+    <Compile Include="Kitchen\Wash\Queue\QueueKitchenTools.cs" />
+    <Compile Include="Kitchen\Wash\Queue\QueueRoomStuff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

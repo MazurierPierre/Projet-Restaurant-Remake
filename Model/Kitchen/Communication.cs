@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Model.Kitchen
 {
-    class Communication
+    public class Communication
     {
+        //Socket here
     }
 }

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Kitchen.Equipment
+namespace Model.Kitchen
 {
-    class Oven
+    public class QueueRoomStuff
     {
+        //List<RoomStuff> roomStuffList;
     }
 }

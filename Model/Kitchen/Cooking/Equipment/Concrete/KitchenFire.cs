@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Model.Kitchen.Equipment
 {
-    class KitchenFire
+    public class KitchenFire : Equipments
     {
+        public KitchenFire(string name) : base(name)
+        {
+
+        }
     }
 }

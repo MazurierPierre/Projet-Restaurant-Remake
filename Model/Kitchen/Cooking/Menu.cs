@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Model.Kitchen.Cooking
 {
-    class Menu
+    public class Menu
     {
+        public Menu(string name, List<Dish> dishList, bool isMenuOfTheDay)
+        {
+            this.name = name;
+            this.dishList = dishList;
+            this.isMenuOfTheDay = isMenuOfTheDay;
+        }
+
+        public string name { get; set; }
+        public List<Dish> dishList { get; set; }
+        public Boolean isMenuOfTheDay { get; set; }
+
     }
 }

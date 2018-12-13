@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Model.Kitchen.Wash.Machines
 {
-    class WashingMachine
+    public class WashingMachine : WashingRoomTools
     {
+        public WashingMachine() : base(10, 30)
+        {
+
+        }
     }
 }
