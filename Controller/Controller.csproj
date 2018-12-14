@@ -68,6 +68,7 @@
     <Compile Include="Common\Serve.cs" />
     <Compile Include="Common\TakeOrder.cs" />
     <Compile Include="Common\VerifyReservation.cs" />
+    <Compile Include="InitControler.cs" />
     <Compile Include="Interfaces\IAct.cs" />
     <Compile Include="Interfaces\IActor.cs" />
     <Compile Include="Interfaces\IClock.cs" />
@@ -86,7 +87,12 @@
     <Compile Include="Room\RoomClerk.cs" />
     <Compile Include="Room\Waiter.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{579FE5EA-EED1-43E2-8EEF-9A92F08AF1D2}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

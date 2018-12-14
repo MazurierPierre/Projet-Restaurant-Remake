@@ -7,29 +7,34 @@ using System.Threading.Tasks;
 
 namespace Controller.Common
 {
-    class Actor : IActor//, IObserver<T>
+    public abstract class Actor : IActor, IAct
     {
+        public string name { get; set; }
         public IDisposable cancellation { get; set; }
         public List<string> itemInfo { get; set; }
-        public Dictionary<string, IAct> actions { get; set; }
         public IAct iAct { get; set; }
-        public InitControler initControler;
+        public Dictionary<string, IAct> mapActions { get; set; }
+        public Boolean lockAction;
 
-        /*
-        public void OnCompleted()
+        protected Actor(string name)
+        {
+            this.name = name;
+            this.mapActions = new Dictionary<string, IAct>();
+        }
+
+        public virtual void act()
         {
             throw new NotImplementedException();
         }
 
-        public void OnError(Exception error)
+        public virtual void threadStart()
         {
             throw new NotImplementedException();
         }
 
-        public void OnNext(T value)
+        public virtual void action(string choice)
         {
             throw new NotImplementedException();
         }
-        */
     }
 }

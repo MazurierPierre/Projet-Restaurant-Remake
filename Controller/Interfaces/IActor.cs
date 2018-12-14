@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Controller.Interfaces
 {
-    interface IActor
+    public interface IActor
     {
+        void threadStart();
+        void action(string choice);
     }
 }

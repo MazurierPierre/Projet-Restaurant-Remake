@@ -14,6 +14,24 @@ namespace Model.Kitchen
 {
     public class InitKitchen
     {
+        private static InitKitchen instance = null;
+        private static readonly object padLock = new object();
+        private InitKitchen()
+        {
+
+        }
+
+        public static InitKitchen Instance
+        {
+            get{
+                lock (padLock)
+                {
+                    if (Instance == null)
+                        instance = new InitKitchen();
+                    return instance;
+                } 
+            }
+        }
 
         public void Init()
         {

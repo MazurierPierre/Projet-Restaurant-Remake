@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Controller.Interfaces
 {
-    interface IAct
+    public interface IAct
     {
         void act();
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Controller.Room
 {
-    class RoomActorList
+    public class RoomActorList
     {
         List<Client> clientList { get; set; }
         List<RoomClerk> clerkList { get; set; }
