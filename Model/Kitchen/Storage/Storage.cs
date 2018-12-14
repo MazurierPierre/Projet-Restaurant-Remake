@@ -10,7 +10,7 @@ namespace Model.Kitchen.Storage
 {
     public abstract class Storage : IStorage
     {
-        protected Storage(int temperature, int maxCapacity, List<Ingredient> ingredientsList)
+        protected Storage(int temperature, int maxCapacity)
         {
             this.temperature = temperature;
             this.maxCapacity = maxCapacity;

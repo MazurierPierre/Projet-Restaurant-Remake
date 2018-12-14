@@ -9,7 +9,7 @@ namespace Model.Kitchen.Storage
 {
     public class Fridge : Storage
     {
-        public Fridge() : base(5, 30, null)
+        public Fridge() : base(5, 30)
         {
         }
     }

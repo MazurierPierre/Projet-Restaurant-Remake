@@ -9,7 +9,7 @@ namespace Model.Kitchen.Storage
 {
     public class Supply : Storage
     {
-        public Supply() : base(20, 30, null)
+        public Supply() : base(20, 30)
         {
 
         }

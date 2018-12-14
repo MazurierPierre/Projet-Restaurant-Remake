@@ -11,6 +11,7 @@ namespace Model.Kitchen.Wash.Machines
     {
         public Sink() : base(10, 30)
         {
+
         }
     }
 }

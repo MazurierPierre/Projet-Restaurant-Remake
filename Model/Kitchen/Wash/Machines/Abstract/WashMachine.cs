@@ -12,6 +12,7 @@ namespace Model.Kitchen.Wash.Machines
 
         public int washTime { get; set; }
         public int maxCapacity { get; set; }
+        public Boolean isRunning { get; set; }
 
         //Will be implemented later
         public virtual void threadStart()
