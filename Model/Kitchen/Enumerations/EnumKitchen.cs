@@ -8,11 +8,11 @@ namespace Model.Kitchen.Enumerations
 {
     public class EnumKitchen
     {
-        public enum IngredientsType { }
-        public enum KitchenToolsType { }
-        public enum DishState { }
-        public enum DishType { }
-        public enum KitchenState { }
-        public enum MachineType { }
+        public enum IngredientsType { Frozen, Fresh, Dry }
+        public enum KitchenToolsType { OK, Dirt }
+        public enum DishState { Preparing, OK, Eaten }
+        public enum DishType { Entree, MainCourse, Dessert}
+        public enum KitchenState { Clean, Dirt}
+        public enum MachineType { Kitchen, Room, Launching }
     }
 }

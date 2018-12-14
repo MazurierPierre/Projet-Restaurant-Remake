@@ -8,9 +8,9 @@ namespace Model.Kitchen
 {
     public class OrderTable
     {
-        //public List<Order>
-        public int tableNumber { get; set; }
+        // /!\ les indices doivent-être respectés
+        //public List<Order> orderList { get; set; }
+        public int[] tableNumberTable { get; set; }
 
-        //Will be completed after "Order" created in "Room"
     }
 }

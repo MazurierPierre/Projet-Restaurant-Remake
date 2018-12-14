@@ -13,6 +13,7 @@ namespace Controller.Common
         public List<string> itemInfo { get; set; }
         public Dictionary<string, IAct> actions { get; set; }
         public IAct iAct { get; set; }
+        public InitControler initControler;
 
         /*
         public void OnCompleted()

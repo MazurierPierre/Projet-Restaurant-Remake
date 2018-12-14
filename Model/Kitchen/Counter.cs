@@ -9,24 +9,28 @@ namespace Model.Kitchen
 {
     public class Counter
     {
-        public Dish[] dishTable = new Dish[15];
-        public int[] nbTable = new int[15];
+        public Dictionary<int,Dish> mapCounter; //Int < 16
 
-        public Counter(Dish[] dishTable, int[] nbTable)
+        public void addCounter(int tableNumber, Dish dish)
         {
-            this.dishTable = dishTable;
-            this.nbTable = nbTable;
+            if (this.mapCounter[tableNumber] == null && tableNumber < 16)
+            {
+                this.mapCounter[tableNumber] = dish;
+            }         
         }
 
-        public Boolean isTabFull()
+        public void removeFromCounter(int tableNumber)
         {
+            this.mapCounter[tableNumber] = null;
+        }
+
+        public Boolean isCounterFull()
+        {
+            foreach (KeyValuePair<int, Dish> entry in this.mapCounter)
+            {
+                if (entry.Value == null) { return false; }
+            }
             return true;
         }
-
-        public int actualLength()
-        {
-            return 1;
-        }
-
     }
 }

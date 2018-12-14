@@ -9,7 +9,7 @@ namespace Model.Kitchen.Storage
 {
     public class Freezer : Storage
     {
-        public Freezer() : base(-20, 30, null)
+        public Freezer() : base(-20, 30)
         {
 
         }
