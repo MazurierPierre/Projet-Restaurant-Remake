@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Model.Room.Element
 {
-    class Jug
+    public class Jug : RoomStuff
     {
+        public Jug(EnumRoom.JugType type, EnumRoom.MaterialState state) : base("Jug", type, state)
+        {
+        }
     }
 }

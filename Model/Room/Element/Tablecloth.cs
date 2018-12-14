@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Model.Room.Element
 {
-    class Tablecloth
+    public class Tablecloth : RoomStuff
     {
+        public Tablecloth(EnumRoom.TableclothType type, EnumRoom.MaterialState state) : base("Tablecloth", type, state)
+        {
+        }
     }
 }

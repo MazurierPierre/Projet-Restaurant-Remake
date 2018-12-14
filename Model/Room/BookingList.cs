@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Model.Room
 {
-    class BookingList
+    public static class BookingList
     {
+        public static List<BookingForm> bookingList = new List<BookingForm>();
     }
 }
