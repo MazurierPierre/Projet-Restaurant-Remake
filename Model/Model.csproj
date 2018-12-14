@@ -58,8 +58,6 @@
     <Compile Include="Kitchen\Enumerations\EnumKitchen.cs" />
     <Compile Include="Kitchen\InitKitchen.cs" />
     <Compile Include="Kitchen\Interfaces\IStorage.cs" />
-    <Compile Include="Kitchen\Interfaces\IWashingKitchenTools.cs" />
-    <Compile Include="Kitchen\Interfaces\IWashingRoomTools.cs" />
     <Compile Include="Kitchen\Interfaces\IWashMachine.cs" />
     <Compile Include="Kitchen\Kitchen.cs" />
     <Compile Include="Kitchen\OrderTable.cs" />
