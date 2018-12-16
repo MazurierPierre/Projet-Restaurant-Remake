@@ -21,7 +21,7 @@ namespace Model.Room
         public List<Napkin> napkinList { get; set; }
         public List<Glass> glassList { get; set; }
         public List<Card> cardList { get; set; }
-        public Table(int chairAmount, int tableNumber, string state, bool isReserved, List<Bread> breadList, List<Jug> jugList, List<Plate> plateList, Tablecloth tablecloth, List<Napkin> napkinList, List<Glass> glassList, List<Card> cardList)
+        public Table(int chairAmount, int tableNumber, string state, bool isReserved, List<Bread> breadList = null, List<Jug> jugList = null, List<Plate> plateList = null, Tablecloth tablecloth = null, List<Napkin> napkinList = null, List<Glass> glassList = null, List<Card> cardList = null)
         {
             this.chairAmount = chairAmount;
             this.tableNumber = tableNumber;
