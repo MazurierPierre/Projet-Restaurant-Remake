@@ -85,7 +85,7 @@
     <Compile Include="Room\HeadWaiter.cs" />
     <Compile Include="Room\InitRoomControler.cs" />
     <Compile Include="Room\RoomActorList.cs" />
-    <Compile Include="Room\RoomClerk.cs" />
+    <Compile Include="Room\ClerkRoom.cs" />
     <Compile Include="Room\Waiter.cs" />
   </ItemGroup>
   <ItemGroup>

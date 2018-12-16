@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Model.Room.Element;
-//using Modèle.Map.IElement;
+
 
 namespace Model.Room
 {
-    public class Table// : IElement
+    public class Table
     {
         public int chairAmount { get; set; }
         public int tableNumber { get; set; }

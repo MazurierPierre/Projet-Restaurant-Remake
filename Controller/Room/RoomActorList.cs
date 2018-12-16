@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Controller.Room
 {
@@ -12,7 +13,7 @@ namespace Controller.Room
 
         public void init()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

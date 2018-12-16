@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Model.Room.Element;
 
 namespace Model.Room
@@ -57,7 +53,7 @@ namespace Model.Room
         public List<Glass> fluteGlassList { get; set; } = new List<Glass>{};
 
         public List<Bread> breadList { get; set; } = new List<Bread>{};
-        //public List<>  { get; set; } = new List<>{};
+
 
 
         public void Init()
