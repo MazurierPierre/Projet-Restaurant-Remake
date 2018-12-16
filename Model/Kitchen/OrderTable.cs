@@ -9,7 +9,7 @@ namespace Model.Kitchen
     public class OrderTable
     {
         // /!\ les indices doivent-être respectés
-        //public List<Order> orderList { get; set; }
+        public List<TMPOrder> orderList { get; set; } //A modifier avec Order
         public int[] tableNumberTable { get; set; }
 
     }

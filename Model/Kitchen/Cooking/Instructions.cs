@@ -26,6 +26,5 @@ namespace Model.Kitchen.Cooking.Ingredients
         public KitchenAction kitchenAction { get; set; }
         public Equipments equipment { get; set; }
 
-
     }
 }

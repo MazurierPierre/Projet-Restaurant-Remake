@@ -1,4 +1,6 @@
 ﻿using Controller.Interfaces;
+using Model.Kitchen;
+using Model.Kitchen.Enumerations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,7 @@ namespace Controller.Common
     {
         public void act()
         {
-            throw new NotImplementedException();
+            InitKitchen.Instance.kitchen.kitchenState = EnumKitchen.KitchenState.Clean;
         }
     }
 }

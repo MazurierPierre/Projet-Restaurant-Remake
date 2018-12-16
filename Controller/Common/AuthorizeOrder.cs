@@ -1,4 +1,8 @@
 ﻿using Controller.Interfaces;
+using Controller.Kitchen;
+using Model.Kitchen;
+using Model.Kitchen.Cooking;
+using Model.Kitchen.Cooking.Ingredients;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +15,44 @@ namespace Controller.Common
     {
         public void act()
         {
-            throw new NotImplementedException();
+            List<Cook> cookList = KitchenActorList.Instance.cookList;
+            List<KitchenClerck> kitchenClercksList = KitchenActorList.Instance.kitchenClerkList;
+            Cook theCook = null;
+            KitchenClerck theKitchenClerck = null;
+            //Selection des acteurs
+            foreach (Cook cook in cookList)
+            {
+                if (cook.lockAction.Equals(false)) { theCook = cook; } //On choisis un cook disponible
+            }
+            foreach (KitchenClerck kc in kitchenClercksList)
+            {
+                if (kc.lockAction.Equals(false)) { theKitchenClerck = kc; } //On choisis un KC disponible
+            }
+
+            if ((theCook != null) && (theKitchenClerck != null)) //Si deux acteurs sont disponible
+            {
+                OrderTable orderTable = InitKitchen.Instance.orderTable;
+
+                foreach (TMPOrder order in orderTable.orderList) //On consulte tous les order qui sont à faire
+                    foreach (Menu menu in order.listeMenu)
+                        foreach (Dish dish in menu.dishList)
+                            foreach (Instruction instruction in dish.instructionsList)
+
+                                //Utilisation du morning Dish à implémenter ici
+
+                                if (instruction.kitchenAction.name.Equals("Chop Vegetables"))//Si nécessité de chop vegetables
+                                {
+                                    theKitchenClerck.action("ChopVegetables"); //Demander au comis de préparer le plat
+                                }
+                                else //Cook cuisine directement
+                                {
+                                    theCook.action("PrepareDish");
+                                }
+            }
+            else
+            {
+                //Reesayer plus tard
+            }
         }
     }
 }

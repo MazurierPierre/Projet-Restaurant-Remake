@@ -60,6 +60,7 @@
     <Compile Include="Kitchen\Interfaces\IStorage.cs" />
     <Compile Include="Kitchen\Interfaces\IWashMachine.cs" />
     <Compile Include="Kitchen\Kitchen.cs" />
+    <Compile Include="Kitchen\TMPOrder.cs" />
     <Compile Include="Kitchen\OrderTable.cs" />
     <Compile Include="Kitchen\Storage\Concrete\Freezer.cs" />
     <Compile Include="Kitchen\Storage\Concrete\Fridge.cs" />

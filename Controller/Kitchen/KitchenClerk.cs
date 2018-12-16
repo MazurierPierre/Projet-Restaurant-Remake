@@ -1,4 +1,6 @@
 ﻿using Controller.Common;
+using Model.Kitchen.Cooking.Ingredients;
+using Model.Kitchen.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,45 +11,46 @@ namespace Controller.Kitchen
 {
     public class KitchenClerck : Actor
     {
-            public KitchenClerck(string name) : base(name)
-            {
-                this.mapActions.Add("BringMealToCounter", new BringMealToCounter());
-                this.mapActions.Add("ChopVegetables", new ChopVegetables());
-                this.mapActions.Add("CheckStocks", new CheckStocks());
-                this.mapActions.Add("FillStocks", new FillStocks());
-                this.mapActions.Add("RemoveFromStocks", new RemoveFromStocks());
-            }
+        // Méthodes EXCLUSIVES au KC
+        CheckStocks checkstocks = new CheckStocks();
+        FillStocks fillStocks = new FillStocks();
+        RemoveFromStocks removeFromStocks = new RemoveFromStocks();
 
-            //Intéragir avec les stocks
-            public override void action(String choice)
+        public KitchenClerck(string name) : base(name)
+        {
+            this.mapActions.Add("BringMealToCounter", new BringMealToCounter());
+            this.mapActions.Add("ChopVegetables", new ChopVegetables());
+        }
+
+        //Intéragir avec les stocks
+        public override void action(String choice)
+        {
+            switch (choice)
             {
-                switch (choice)
-                {
-                    case "BringMealToCounter":
-                        this.lockAction = true;
-                        this.mapActions["BringMealToCounter"].act();
-                        this.lockAction = false;
-                        break;
-                    case "ChopVegetables":
-                        this.lockAction = true;
-                        this.mapActions["ChopVegetables"].act();
-                        this.lockAction = false;
-                        break;
-                    case "CheckStocks":
-                    this.lockAction = true;
-                    this.mapActions["CheckStocks"].act();
-                        break;
-                    case "FillStocks":
-                        this.mapActions["FillStocks"].act();
-                        break;
-                    case "RemoveFromStocks":
-                        this.mapActions["RemoveFromStocks"].act();
-                        break;
-                    default:
-                        //Do nothing ?
+                case "BringMealToCounter":
+                    this.mapActions["BringMealToCounter"].act();
                     break;
-                }
+                case "ChopVegetables":
+                    this.mapActions["ChopVegetables"].act();
+                    break;
+            }
+        }
+
+        public void actionStorage(String choice, Storage stor, int number, Ingredient ing)
+        {
+            switch (choice)
+            {
+                case "CheckStocks":
+                    checkstocks.act(stor);
+                    break;
+                case "FillStocks":
+                    fillStocks.act(stor,number, ing);
+                    break;
+                case "RemoveFromStocks":
+                    removeFromStocks.act(stor, number, ing);
+                    break;
             }
 
         }
+    }
     }

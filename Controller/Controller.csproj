@@ -68,7 +68,6 @@
     <Compile Include="Common\Serve.cs" />
     <Compile Include="Common\TakeOrder.cs" />
     <Compile Include="Common\VerifyReservation.cs" />
-    <Compile Include="InitControler.cs" />
     <Compile Include="Interfaces\IAct.cs" />
     <Compile Include="Interfaces\IActor.cs" />
     <Compile Include="Interfaces\IClock.cs" />
