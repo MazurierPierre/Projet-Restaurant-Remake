@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
+using Controller.Interfaces;
 using Controller.Room;
+using Model.Kitchen.Cooking;
 using Model.Room;
+using Model.Room.Element;
 
 namespace Controller.Common
 {
-    public class CleanTable : Interfaces.IAct
+    public class CleanTable : IAct
     {
         // TODO: Need to use thread and locks
 
@@ -57,6 +60,47 @@ namespace Controller.Common
                 waiter.communication.SendDirtyDishes(elementToClean[0]); // Use Socket to give to the kitchen the dirty dishes
                 elementToClean.RemoveAt(0); // Remove element from list
             }
+        }
+
+        // Useless
+        public void act()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void act(Client client, Table table)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void act(Table table, EnumRoom.BreadType type)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void act(Table table, EnumRoom.JugType type)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void act(Table table)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void act(Client client)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void act(Card card)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void act(Client client, List<Menu> orderList)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

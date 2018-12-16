@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using Controller.Interfaces;
 using Controller.Room;
 using Model.Kitchen.Cooking;
 using Model.Room;
+using Model.Room.Element;
 
 namespace Controller.Common
 {
-    public class OrderAction : Interfaces.IAct
+    public class OrderAction : IAct
     {
         // TODO : Need to take car of the thread, the lock access
         // TODO : Need to correct the attributes access
@@ -30,6 +32,47 @@ namespace Controller.Common
 
             TakeOrder takeOrder = new TakeOrder();
             takeOrder.act(client, orderList);
+        }
+
+        // Useless
+        public void act()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Client client, Table table)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Table table, EnumRoom.BreadType type)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Table table, EnumRoom.JugType type)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Table table)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Table table, Waiter waiter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Client client)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Client client, List<Menu> orderList)
+        {
+            throw new NotImplementedException();
         }
     }
 }

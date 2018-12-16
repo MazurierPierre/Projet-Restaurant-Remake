@@ -8,6 +8,7 @@ namespace Model.Room
         public Table table { get; set; }
         public DateTime hour { get; set; }
 
+        public InitRoomModel initRoomModel;
         public BookingForm(string name, Table table, DateTime hour)
         {
             this.name = name;
@@ -17,7 +18,7 @@ namespace Model.Room
 
         public void saveBookingForm(BookingForm bookingForm)
         {
-            BookingList.bookingList.Add(bookingForm);
+            initRoomModel.bookingList.Add(bookingForm);
         }
     }
 }

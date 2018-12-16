@@ -2,7 +2,7 @@
 
 namespace Model.Room
 {
-    public class Row : Model.Map.IElements
+    public class Row // : Model.Map.IElements
     {
         public int number { get; set; }
         public List<Table> tableList { get; set; }

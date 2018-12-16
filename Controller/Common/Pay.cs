@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using Controller.Interfaces;
 using Controller.Room;
+using Model.Kitchen.Cooking;
 using Model.Room;
+using Model.Room.Element;
 
 namespace Controller.Common
 {
-    public class Pay : Interfaces.IAct
+    public class Pay : IAct
     {
         //TODO : Take care of the threads
         private InitRoomModel initRoomModel;
@@ -20,6 +24,47 @@ namespace Controller.Common
             }
 
             table.state = "free";
+        }
+
+        // Useless
+        public void act()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Table table, EnumRoom.BreadType type)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Table table, EnumRoom.JugType type)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Table table)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Table table, Waiter waiter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Client client)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Card card)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Client client, List<Menu> orderList)
+        {
+            throw new NotImplementedException();
         }
     }
 }
