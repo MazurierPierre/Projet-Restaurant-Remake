@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Controller.Common
 {
-    public class IsDishAchievable : IAct
+    public class CleanRoomware : IAct
     {
         public void act()
         {
@@ -56,11 +56,6 @@ namespace Controller.Common
         public void act(Client client, List<Menu> orderList)
         {
             throw new NotImplementedException();
-        }
-
-        public Boolean isAvailable()
-        {
-            return true;
         }
     }
 }

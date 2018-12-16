@@ -1,9 +1,12 @@
 ﻿using Controller.Interfaces;
 using Controller.Kitchen;
+using Controller.Room;
 using Model.Kitchen;
 using Model.Kitchen.Cooking;
 using Model.Kitchen.Cooking.Ingredients;
 using Model.Kitchen.Enumerations;
+using Model.Room;
+using Model.Room.Element;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +42,46 @@ namespace Controller.Common
                                 InitKitchen.Instance.dishReady.Add(new Tuple<Dish, int>(dishreturn, 1));
 
             }
+        }
+
+        public void act(Client client, Table table)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Table table, EnumRoom.BreadType type)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Table table, EnumRoom.JugType type)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Table table)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Table table, Waiter waiter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Client client)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Card card)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void act(Client client, List<Menu> orderList)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -53,6 +53,7 @@
     <Compile Include="Common\ChopVegetables.cs" />
     <Compile Include="Common\CleanKitchen.cs" />
     <Compile Include="Common\CleanKitchenware.cs" />
+    <Compile Include="Common\CleanRoomware.cs" />
     <Compile Include="Common\CleanTable.cs" />
     <Compile Include="Common\Eat.cs" />
     <Compile Include="Common\FillStocks.cs" />
