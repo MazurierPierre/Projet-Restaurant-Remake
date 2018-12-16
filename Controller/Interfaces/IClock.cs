@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Controller.Interfaces
 {
-    interface IClock
+    interface Clock
     {
     }
 }

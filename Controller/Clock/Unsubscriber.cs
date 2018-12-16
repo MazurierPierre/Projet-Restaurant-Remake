@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Controller.Clock
+namespace Controller.Time
 {
     internal class Unsubscriber<T> : IDisposable
     {

@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace Controller.Clock
+namespace Controller.Time
 {
-    class Clock : IClock, IObservable<Clock>
+    public class Clock : Interfaces.Clock, IObservable<Clock>
     {
         // Single instance of clock (Usefull for Singleton pattern)
         private static Clock instance = null;
