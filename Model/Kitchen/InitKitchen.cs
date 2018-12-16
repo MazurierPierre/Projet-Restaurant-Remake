@@ -48,7 +48,7 @@ namespace Model.Kitchen
             InitWashMachine(); //Washmachine & overs
             InitCounter(); //Init the counter and places
             InitKitchenObject(); //The kitchen itself
-
+            InitCommunication();// For receving data stream
         }
 
         /* =====================================INGREDIENT===================================*/
@@ -282,7 +282,15 @@ namespace Model.Kitchen
         {
             kitchen = new Kitchen(EnumKitchen.KitchenState.Clean, counter,orderTable, fridgesList, freezersList, supplyList, sinksList, dishwasherMachinesList, washingMachinesList, kitchenFiresList, ovensList);
         }
+
+        /* ======================================OTHERS===================================== */
+
+        Communication communication = new Communication();
         
+        public void InitCommunication()
+        {
+            communication.StartListening();
+        }
     }
 }
 
