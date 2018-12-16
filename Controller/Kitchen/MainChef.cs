@@ -21,7 +21,7 @@ namespace Controller.Kitchen
         {
             switch (choice)
             {
-                case "isDishAchievable":
+                case "AuthorizeOrder":
                     if (isDishAvailable.isAvailable()) //If dish is Achievable
                     {
                         this.mapActions["FindDishSimilarities"].act(); //Regroupement des similarités

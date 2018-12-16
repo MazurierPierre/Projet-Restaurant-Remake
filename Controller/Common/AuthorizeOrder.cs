@@ -22,6 +22,7 @@ namespace Controller.Common
             List<KitchenClerck> kitchenClercksList = KitchenActorList.Instance.kitchenClerkList;
             Cook theCook = null;
             KitchenClerck theKitchenClerck = null;
+            Boolean CKMustCook = false;
             //Selection des acteurs
             foreach (Cook cook in cookList)
             {
@@ -36,21 +37,29 @@ namespace Controller.Common
             {
                 OrderTable orderTable = InitKitchen.Instance.orderTable;
 
-                foreach (TMPOrder order in orderTable.orderList) //On consulte tous les order qui sont à faire
-                    foreach (Menu menu in order.listeMenu)
+                foreach (Order order in orderTable.orderList)
+                { //On consulte tous les order qui sont à faire
+                    foreach (Menu menu in order.orderList)
+                    {
                         foreach (Dish dish in menu.dishList)
+                        {
                             foreach (Instruction instruction in dish.instructionsList)
-
-                                //Utilisation du morning Dish à implémenter ici
-
-                                if (instruction.kitchenAction.name.Equals("Chop Vegetables"))//Si nécessité de chop vegetables
-                                {
-                                    theKitchenClerck.action("ChopVegetables"); //Demander au comis de préparer le plat
-                                }
-                                else //Cook cuisine directement
-                                {
-                                    theCook.action("PrepareDish");
-                                }
+                            {
+                                if(instruction.kitchenAction.name.Equals("Chop Vegetables")) { CKMustCook = true; }
+                            }
+                            if (CKMustCook)//Si nécessité de chop vegetables
+                            {
+                                theKitchenClerck.action("ChopVegetables"); //Demander au comis de préparer le plat
+                                return;
+                            }
+                            else //Cook cuisine directement
+                            {
+                                theCook.action("PrepareDish");
+                                return;
+                            }
+                        }
+                    }
+                }
             }
             else
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Room;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Model.Kitchen
     public class OrderTable
     {
         // /!\ les indices doivent-être respectés
-        public List<TMPOrder> orderList { get; set; } //A modifier avec Order
+        public List<Order> orderList { get; set; } = new List<Order>();//A modifier avec Order
         public int[] tableNumberTable { get; set; }
 
     }

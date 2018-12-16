@@ -14,7 +14,7 @@ namespace Model.Kitchen.Storage
         {
             this.temperature = temperature;
             this.maxCapacity = maxCapacity;
-            this.ingredientsList = ingredientsList;
+            this.ingredientsList = new List<Ingredient>();
         }
 
         public int temperature { get; set; }
