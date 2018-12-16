@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Projet_Restaurant_Remake
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Lógica de interacción para Simulation.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Simulation : Window
     {
-        public MainWindow()
+        public Simulation()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Settings setting = new Settings();
-            setting.Show();
-            this.Close();
         }
     }
 }
