@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clock\Clock.cs" />
+    <Compile Include="Clock\Unsubscriber.cs" />
     <Compile Include="Common\Actor.cs" />
     <Compile Include="Common\AssignTable.cs" />
     <Compile Include="Common\AuthorizeOrder.cs" />
