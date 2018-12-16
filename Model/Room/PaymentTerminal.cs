@@ -3,11 +3,16 @@
     public class PaymentTerminal
     {
         public int deskNumber { get; set; }
-        public int nbClientPayed { get; set; }
-        public PaymentTerminal(int deskNumber, int nbClientPayed)
+        public int nbClientPaid { get; set; }
+        public PaymentTerminal(int deskNumber, int nbClientPaid)
         {
             this.deskNumber = deskNumber;
-            this.nbClientPayed = nbClientPayed;
+            this.nbClientPaid = nbClientPaid;
+        }
+
+        public void incNbClientPaid(int i)
+        {
+            nbClientPaid = nbClientPaid + i;
         }
     }
 }

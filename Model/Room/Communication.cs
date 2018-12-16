@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model.Room
 {
-    class Communication
+    public class Communication
     {
         public void SendDirtyDishes(String dirtyDish)
         {

@@ -11,9 +11,5 @@ namespace Controller.Room
         List<Waiter> waiterList { get; set; }
         List<HeadWaiter> headWaiterList { get; set; }
 
-        public void init()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
