@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * For more information (comments), please view DAL/DAO/DishDAO.cs
+ */
+
 namespace DAL
 {
     public class IngredientDAO : IDAO<Ingredient>

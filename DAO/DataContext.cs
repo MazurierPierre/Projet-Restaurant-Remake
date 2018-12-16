@@ -9,6 +9,7 @@ namespace DAL
 {
     class DataContext : DbContext
     {
+        // Usefull to create the necessary tables in Database
         public DbSet<Action> Action { get; set; }
         public DbSet<Dish> Dish { get; set; }
         public DbSet<Ingredient> Ingredient { get; set; }
@@ -19,6 +20,7 @@ namespace DAL
         public DbSet<Role> Role { get; set; }
         public DbSet<InstructionInDish> InstructionInDish { get; set; }
 
+        // Initialize the data in Database
         public void initialize()
         {
             var initializer = new Initializer();

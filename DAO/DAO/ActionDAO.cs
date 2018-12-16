@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * For more information (comments), please view DAL/DAO/DishDAO.cs
+ */
+
 namespace DAL
 {
     public class ActionDAO : IDAO<Action>
     {
-        // Singleton pattern (thread safe) \\
+        // Singleton pattern
         private static ActionDAO instance = null;
         private static readonly object padlock = new object();
 

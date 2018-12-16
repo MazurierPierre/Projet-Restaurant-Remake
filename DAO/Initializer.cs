@@ -8,6 +8,7 @@ namespace DAL
 {
     class Initializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<DataContext>
     {
+        // The Seed Method is used to populate the database on creation.
         public void Seed(DataContext context)
         {
             var slice = new Action { ID = 0, name = "Slice", description = "", duration = 2 };
