@@ -2,10 +2,10 @@
 
 namespace Controller.Common
 {
-    public class Eat
+    public class Eat : Interfaces.IAct
     {
         // Because we don't have time to finish the clock i can't manage the speed increase
-        public void voidAct(Client client) // Allow the client to eat and so spend a specific time
+        public void act(Client client) // Allow the client to eat and so spend a specific time
         {
             if (client.behavior == "Relaxed")
             {

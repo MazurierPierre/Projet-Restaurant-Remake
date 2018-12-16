@@ -3,12 +3,12 @@ using Model.Room;
 
 namespace Controller.Common
 {
-    public class PlaceClient
+    public class PlaceClient : Interfaces.IAct
     {
         //public delegate void Del(Table table, EnumRoom.BreadType type);
 
         // TODO : Need to use thread, locks 
-        public void voidAct(Client client, Table table)
+        public void act(Client client, Table table)
         {
             ClientOnTable.clientAndTable.Add(table, client); // Add the client in the list of client present in the room
             ClientQueue.clientList.Remove(client); // Remove the client of the queue
@@ -16,7 +16,7 @@ namespace Controller.Common
 
             /*
             BringBread bringBread = new BringBread();
-            Del foo = new Del(bringBread.voidAct);
+            Del foo = new Del(bringBread.act);
             Thread bread = new Thread(() => foo(table, EnumRoom.BreadType.White));
             */
         }

@@ -3,11 +3,11 @@ using Model.Room;
 
 namespace Controller.Common
 {
-    public class VerifyReservation
+    public class VerifyReservation : Interfaces.IAct
     {
         public object BookingList { get; private set; }
         private InitRoomModel initRoomModel;
-        public void voidAct(Client client) // Verify if the client has a reservation
+        public void act(Client client) // Verify if the client has a reservation
         {
             string name = client.name;
 
@@ -16,7 +16,7 @@ namespace Controller.Common
                 if (bookingForm.name == name) // If reservation founded :
                 {
                     AssignTable assignTable = new AssignTable();
-                    assignTable.voidAct(client, bookingForm.table); // Assign the table to the client
+                    assignTable.act(client, bookingForm.table); // Assign the table to the client
                 }
             }
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using Controller.Common;
+using Model.Room;
 
 namespace Controller.Room
 {
@@ -8,8 +9,8 @@ namespace Controller.Room
         public Butler(string name) : base(name)
         {
             this.name = name;
-            this.mapAct.Add("VerifyReservation", new VerifyReservation()); // Can Verify the reservation's list
-            this.mapAct.Add("AssignTable", new AssignTable()); // Can assign a client to a table
+            this.mapActions.Add("VerifyReservation", new VerifyReservation()); // Can Verify the reservation's list
+            this.mapActions.Add("AssignTable", new AssignTable()); // Can assign a client to a table
 
         }
         public void Action(String choice, Client client, Table table = null)
@@ -17,12 +18,13 @@ namespace Controller.Room
             switch (choice)
             {
                 case "VerifyReservation":
-                    VerifyReservation verifyReservation = (VerifyReservation)this.mapAct["VerifyReservation"];
-                    verifyReservation.voidAct(client);
+                    //this.mapActions["VerifyReservation"].act();
+                    VerifyReservation verifyReservation = (VerifyReservation)this.mapActions["VerifyReservation"];
+                    verifyReservation.act(client);
                     break;
                 case "AssignTable":
-                    AssignTable assignTable = (AssignTable)this.mapAct["AssignTable"];
-                    assignTable.voidAct(client, table);
+                    AssignTable assignTable = (AssignTable)this.mapActions["AssignTable"];
+                    assignTable.act(client, table);
                     break;
                 default:
                     break;

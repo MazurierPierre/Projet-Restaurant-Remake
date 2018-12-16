@@ -7,7 +7,7 @@ using Model.Room;
 
 namespace Controller.Common
 {
-    public class TakeOrder //: IAct
+    public class TakeOrder : Interfaces.IAct
     {
         // Todo : Need to take car of the thread, the lock access
 
@@ -15,7 +15,7 @@ namespace Controller.Common
         //private OrderTable orderTable;
 
         // This method changes the lock and gives the list of dish to the kitchen
-        public void voidAct(Client client, List<Menu> orderList)
+        public void act(Client client, List<Menu> orderList)
         {
             while (orderOk == false)
             {

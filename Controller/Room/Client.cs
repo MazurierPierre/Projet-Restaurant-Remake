@@ -22,9 +22,9 @@ namespace Controller.Room
 
 
             // This the OrderAction behavior
-            this.mapAct.Add("Order", new OrderAction()); // Can order to the Waiter
-            this.mapAct.Add("Pay", new Pay()); // Can pay
-            this.mapAct.Add("Eat", new Eat());
+            this.mapActions.Add("Order", new OrderAction()); // Can order to the Waiter
+            this.mapActions.Add("Pay", new Pay()); // Can pay
+            this.mapActions.Add("Eat", new Eat());
         }
 
         public void Action(String choice, Card card = null, Client client = null, Table table = null)
@@ -32,16 +32,16 @@ namespace Controller.Room
             switch (choice)
             {
                 case "Eat":
-                    Eat eat = (Eat)this.mapAct["Eat"];
-                    eat.voidAct(client);
+                    Eat eat = (Eat)this.mapActions["Eat"];
+                    eat.act(client);
                     break;
                 case "OrderAction":
-                    OrderAction orderAction = (OrderAction)this.mapAct["OrderAction"];
-                    orderAction.voidAct(card);
+                    OrderAction orderAction = (OrderAction)this.mapActions["OrderAction"];
+                    orderAction.act(card);
                     break;
                 case "Pay":
-                    Pay pay = (Pay)this.mapAct["Pay"];
-                    pay.VoidAct(client, table);
+                    Pay pay = (Pay)this.mapActions["Pay"];
+                    pay.act(client, table);
                     break;
                 default:
                     break;

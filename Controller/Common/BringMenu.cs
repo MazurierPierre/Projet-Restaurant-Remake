@@ -2,11 +2,11 @@
 
 namespace Controller.Common
 {
-    public class BringMenu
+    public class BringMenu : Interfaces.IAct
     {
         private InitRoomModel initRoomModel;
         // TODO : Need to use thread
-        public void voidAct(Table table) // Bring the menu to the client
+        public void act(Table table) // Bring the menu to the client
         {
             for (int i = 0; i < table.chairAmount; i++)
             {

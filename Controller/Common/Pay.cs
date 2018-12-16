@@ -4,11 +4,11 @@ using Model.Room;
 
 namespace Controller.Common
 {
-    public class Pay 
+    public class Pay : Interfaces.IAct
     {
         //TODO : Take care of the threads
         private InitRoomModel initRoomModel;
-        public void VoidAct(Client client, Table table)
+        public void act(Client client, Table table)
         {
             // We don't manage the price of the dishes 
             // so we could think we just have to destroy the client's thread.

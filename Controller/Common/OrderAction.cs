@@ -6,7 +6,7 @@ using Model.Room;
 
 namespace Controller.Common
 {
-    public class OrderAction //: IAct
+    public class OrderAction : Interfaces.IAct
     {
         // TODO : Need to take car of the thread, the lock access
         // TODO : Need to correct the attributes access
@@ -17,7 +17,7 @@ namespace Controller.Common
 
         List<Menu> orderList { get; set; }
 
-        public void voidAct(Card card)         // This method gives the list of dish to HeadWaiter
+        public void act(Card card)         // This method gives the list of dish to HeadWaiter
         {
             int sizeOfMenuDish = card.menus.Count - 1; // Get the length of the menu list
 
@@ -29,7 +29,7 @@ namespace Controller.Common
             }
 
             TakeOrder takeOrder = new TakeOrder();
-            takeOrder.voidAct(client, orderList);
+            takeOrder.act(client, orderList);
         }
     }
 }

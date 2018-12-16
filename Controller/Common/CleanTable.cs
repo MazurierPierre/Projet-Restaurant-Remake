@@ -4,12 +4,12 @@ using Model.Room;
 
 namespace Controller.Common
 {
-    public class CleanTable
+    public class CleanTable : Interfaces.IAct
     {
         // TODO: Need to use thread and locks
 
         public List<string> elementToClean = new List<string> { };
-        public void voidAct(Table table, Waiter waiter) // Clean all the Element
+        public void act(Table table, Waiter waiter) // Clean all the Element
         {
             //Remove Bread
             for(int i = 0; i < table.breadList.Count; i++)

@@ -3,10 +3,10 @@ using Model.Room;
 
 namespace Controller.Common
 {
-    public class AssignTable // : IAct // Give the client a table number
+    public class AssignTable : Interfaces.IAct // Give the client a table number
     {
         // TODO : Need to use Thread and the locks
-        public void voidAct(Client client, Table table) // Assign a client to a table
+        public void act(Client client, Table table) // Assign a client to a table
         {
             PlaceClient placeClient = new PlaceClient();
             client.setTableNumber(table.tableNumber); // Give the table's number to the client
@@ -16,7 +16,7 @@ namespace Controller.Common
             {
                 table.isReserved = false;
             }
-            placeClient.voidAct(client, table); // Place the client to the table
+            placeClient.act(client, table); // Place the client to the table
         }
     }
 }
