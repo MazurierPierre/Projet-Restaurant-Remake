@@ -8,7 +8,7 @@ namespace Controller.Room
     public class Waiter : Common.Actor
     {
         public Square square { get; set; }
-
+        public Communication communication = new Communication();
         public Waiter(string name, Square square) : base(name)
         {
             this.name = name;
