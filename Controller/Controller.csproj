@@ -78,9 +78,9 @@
     <Compile Include="Kitchen\KitchenClerk.cs" />
     <Compile Include="Kitchen\MainChef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Room\BookingList.cs" />
     <Compile Include="Room\Butler.cs" />
     <Compile Include="Room\Client.cs" />
+    <Compile Include="Room\ClientOnTable.cs" />
     <Compile Include="Room\ClientQueue.cs" />
     <Compile Include="Room\HeadWaiter.cs" />
     <Compile Include="Room\RoomActorList.cs" />

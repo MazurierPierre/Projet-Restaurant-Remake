@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Controller.Room
 {
     public class RoomActorList
     {
         List<Client> clientList { get; set; }
-        List<RoomClerk> clerkList { get; set; }
+        List<ClerkRoom> clerkList { get; set; }
         List<Butler> butlerList { get; set; }
         List<Waiter> waiterList { get; set; }
         List<HeadWaiter> headWaiterList { get; set; }

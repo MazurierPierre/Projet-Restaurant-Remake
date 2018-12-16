@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Controller.Room
 {
-    class BookingList
+    class InitRoomControler
     {
     }
 }
