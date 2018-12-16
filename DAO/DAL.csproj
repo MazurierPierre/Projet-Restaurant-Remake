@@ -49,7 +49,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DAO\ActionDAO.cs" />
+    <Compile Include="DAO\DishDAO.cs" />
+    <Compile Include="DAO\IDAO.cs" />
+    <Compile Include="DAO\IngredientDAO.cs" />
+    <Compile Include="DAO\IngredientTypeDAO.cs" />
+    <Compile Include="DAO\InstructionDAO.cs" />
+    <Compile Include="DAO\KitchenToolDAO.cs" />
+    <Compile Include="DAO\MemberDAO.cs" />
+    <Compile Include="DAO\RoleDAO.cs" />
+    <Compile Include="DataContext.cs" />
+    <Compile Include="dbModel\Action.cs" />
+    <Compile Include="dbModel\Dish.cs" />
+    <Compile Include="dbModel\Ingredient.cs" />
+    <Compile Include="dbModel\IngredientType.cs" />
+    <Compile Include="dbModel\Instruction.cs" />
+    <Compile Include="dbModel\InstructionInDish.cs" />
+    <Compile Include="dbModel\KitchenTool.cs" />
+    <Compile Include="dbModel\Member.cs" />
+    <Compile Include="dbModel\Role.cs" />
+    <Compile Include="Initializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

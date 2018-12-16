@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clock\Clock.cs" />
+    <Compile Include="Clock\Unsubscriber.cs" />
     <Compile Include="Common\Actor.cs" />
     <Compile Include="Common\AssignTable.cs" />
     <Compile Include="Common\AuthorizeOrder.cs" />
@@ -68,7 +69,6 @@
     <Compile Include="Common\Serve.cs" />
     <Compile Include="Common\TakeOrder.cs" />
     <Compile Include="Common\VerifyReservation.cs" />
-    <Compile Include="InitControler.cs" />
     <Compile Include="Interfaces\IAct.cs" />
     <Compile Include="Interfaces\IActor.cs" />
     <Compile Include="Interfaces\IClock.cs" />
