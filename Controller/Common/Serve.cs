@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Model.Room;
 
 namespace Controller.Common
 {
-    class Serve
+    public class Serve
     {
+        public void voidAct(Table table)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

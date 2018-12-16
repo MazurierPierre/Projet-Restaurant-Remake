@@ -41,7 +41,7 @@ namespace Controller.Room
                     break;
                 case "Pay":
                     Pay pay = (Pay)this.mapAct["Pay"];
-                    pay.voidAct(client, table);
+                    pay.VoidAct(client, table);
                     break;
                 default:
                     break;

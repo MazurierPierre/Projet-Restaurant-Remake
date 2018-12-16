@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Model.Room;
 
 namespace Controller.Common
 {
-    class BringMenu
+    public class BringMenu
     {
+        private InitRoomModel initRoomModel;
+        // TODO : Need to use thread
+        public void voidAct(Table table) // Bring the menu to the client
+        {
+            for (int i = 0; i < table.chairAmount; i++)
+            {
+                Card card = initRoomModel.cardList[i]; // Fetch the Card
+                table.cardList.Add(card); // Add the card to the table
+            }
+            initRoomModel.cardList.RemoveRange(0, table.chairAmount); // Remove card from stock
+
+        }
     }
 }

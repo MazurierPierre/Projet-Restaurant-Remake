@@ -34,7 +34,7 @@ namespace Model.Room
         public List<Order> orderList { get; set; } = new List<Order>{};
         public List<Drink> drinkList { get; set; } = new List<Drink>{};
         public List<Card> cardList { get; set; } = new List<Card>{};
-        public static List<BookingForm> bookingList { get; set; } = new List<BookingForm>();
+        public List<BookingForm> bookingList { get; set; } = new List<BookingForm>();
         public List<Tablecloth> tableclothList { get; set; } = new List<Tablecloth>{};
 
         // List of differents type of plates
