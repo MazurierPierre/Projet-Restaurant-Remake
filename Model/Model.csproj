@@ -75,7 +75,6 @@
     <Compile Include="Kitchen\Wash\Queue\QueueRoomStuff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room\BookingForm.cs" />
-    <Compile Include="Room\BookingList.cs" />
     <Compile Include="Room\Card.cs" />
     <Compile Include="Room\Communication.cs" />
     <Compile Include="Room\Drink.cs" />
@@ -87,7 +86,7 @@
     <Compile Include="Room\Element\Napkin.cs" />
     <Compile Include="Room\Element\Plate.cs" />
     <Compile Include="Room\Element\Tablecloth.cs" />
-    <Compile Include="Room\InitRoom.cs" />
+    <Compile Include="Room\InitRoomModel.cs" />
     <Compile Include="Room\Order.cs" />
     <Compile Include="Room\PaymentTerminal.cs" />
     <Compile Include="Room\Room.cs" />
