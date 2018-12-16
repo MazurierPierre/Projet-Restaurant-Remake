@@ -5,24 +5,21 @@ using Model.Room.Element;
 
 namespace Controller.Room
 {
-    public class Waiter : Common.Actor
+    public class ClerkRoom : Common.Actor
     {
-        public Square square { get; set; }
-
-        public Waiter(string name, Square square) : base(name)
+        public ClerkRoom(string name) : base(name)
         {
             this.name = name;
-            this.square = square;
 
-            // This is the waiter's roles
+            // This is the clerk's roles
+            this.mapAct.Add("BringBread", new BringBread()); // Can bring the bread
+            this.mapAct.Add("BringJug", new BringJug()); // Can bring the Jug
+
+            // But it can take also the waiter's role
             this.mapAct.Add("Serve", new Serve()); // Can serve the client
             this.mapAct.Add("CleanTable", new CleanTable()); // Can clean the table
 
-            // But it can take also the clerk's role,
-            this.mapAct.Add("BringBread", new BringBread()); // Can bring the bread
-            this.mapAct.Add("BringJug", new BringJug()); // Can bring the Jug
         }
-
         public void Action(String choice, Table table, EnumRoom.BreadType breadType = EnumRoom.BreadType.White, EnumRoom.JugType jugType = EnumRoom.JugType.Tap)
         {
             switch (choice)
@@ -48,4 +45,3 @@ namespace Controller.Room
         }
     }
 }
-

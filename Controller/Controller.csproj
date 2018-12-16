@@ -68,7 +68,6 @@
     <Compile Include="Common\Serve.cs" />
     <Compile Include="Common\TakeOrder.cs" />
     <Compile Include="Common\VerifyReservation.cs" />
-    <Compile Include="InitControler.cs" />
     <Compile Include="Interfaces\IAct.cs" />
     <Compile Include="Interfaces\IActor.cs" />
     <Compile Include="Interfaces\IClock.cs" />
@@ -78,13 +77,14 @@
     <Compile Include="Kitchen\KitchenClerk.cs" />
     <Compile Include="Kitchen\MainChef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Room\BookingList.cs" />
     <Compile Include="Room\Butler.cs" />
     <Compile Include="Room\Client.cs" />
+    <Compile Include="Room\ClientOnTable.cs" />
     <Compile Include="Room\ClientQueue.cs" />
     <Compile Include="Room\HeadWaiter.cs" />
+    <Compile Include="Room\InitRoomControler.cs" />
     <Compile Include="Room\RoomActorList.cs" />
-    <Compile Include="Room\RoomClerk.cs" />
+    <Compile Include="Room\ClerkRoom.cs" />
     <Compile Include="Room\Waiter.cs" />
   </ItemGroup>
   <ItemGroup>
