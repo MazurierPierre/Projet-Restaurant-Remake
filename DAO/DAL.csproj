@@ -69,21 +69,12 @@
     <Compile Include="dbModel\Member.cs" />
     <Compile Include="dbModel\Role.cs" />
     <Compile Include="Initializer.cs" />
-    <Compile Include="Migrations\201812161653335_FirstMigration.cs" />
-    <Compile Include="Migrations\201812161653335_FirstMigration.Designer.cs">
-      <DependentUpon>201812161653335_FirstMigration.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201812161653335_FirstMigration.resx">
-      <DependentUpon>201812161653335_FirstMigration.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
