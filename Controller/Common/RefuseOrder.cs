@@ -13,5 +13,10 @@ namespace Controller.Common
         {
             throw new NotImplementedException();
         }
+
+        /*public void act(OrderTable orderTbl)
+        {
+            //Demander à Re-Order auprès du serverur ==> Cf avec Gilly
+        }*/
     }
 }

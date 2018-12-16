@@ -23,13 +23,13 @@ namespace Model.Kitchen
 
         public static InitKitchen Instance
         {
-            get{
+            get {
                 lock (padLock)
                 {
                     if (Instance == null)
                         instance = new InitKitchen();
                     return instance;
-                } 
+                }
             }
         }
 
@@ -46,9 +46,9 @@ namespace Model.Kitchen
 
             InitQueue(); //Initialise WashQueue
             InitWashMachine(); //Washmachine & overs
-
+            InitCounter(); //Init the counter and places
             InitKitchenObject(); //The kitchen itself
-
+            InitCommunication();// For receving data stream
         }
 
         /* =====================================INGREDIENT===================================*/
@@ -176,6 +176,8 @@ namespace Model.Kitchen
         //Dessert ?
         public Menu menu1 { get; set; }
 
+        public List<Tuple<Dish, int>> dishReady { get; set; } // List qui va servir de transition quand un plat est finis de cuisiner
+
         public void InitToolsAndActions()
         {
             //[...] KitchenAction
@@ -259,6 +261,15 @@ namespace Model.Kitchen
         /* ======================================COUNTER & ORDER TABLE===================================== */
         //Counter
         public Counter counter { get; set; } = new Counter();
+        public void InitCounter()
+        {
+            for (int i = 1; i < 16; i++)
+            {
+                counter.mapCounter.Add(0, null); //Place libre de counter
+            }
+            
+        }
+
         //OrderTable
         public OrderTable orderTable { get; set; } = new OrderTable();
 
@@ -271,7 +282,15 @@ namespace Model.Kitchen
         {
             kitchen = new Kitchen(EnumKitchen.KitchenState.Clean, counter,orderTable, fridgesList, freezersList, supplyList, sinksList, dishwasherMachinesList, washingMachinesList, kitchenFiresList, ovensList);
         }
+
+        /* ======================================OTHERS===================================== */
+
+        Communication communication = new Communication();
         
+        public void InitCommunication()
+        {
+            communication.StartListening();
+        }
     }
 }
 
