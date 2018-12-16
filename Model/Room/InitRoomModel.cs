@@ -13,7 +13,7 @@ namespace Model.Room
         private static readonly object padLock = new object();
         private InitRoomModel()
         {
-
+            Init();
         }
 
         public static InitRoomModel Instance
@@ -62,7 +62,7 @@ namespace Model.Room
 
         public void Init()
         {
-            //Initialise Elements
+            //Initialize Elements
             InitBread();
             InitGlass();
             InitJug();
@@ -70,7 +70,7 @@ namespace Model.Room
             InitPlate();
             InitTablecloth();
 
-            //Initialise objects
+            //Initialize objects
             InitDrink();
             InitCard();
             InitPaymentTerminal();
