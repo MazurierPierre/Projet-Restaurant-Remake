@@ -74,9 +74,6 @@ namespace Model.Room
             InitDrink();
             InitCard();
             InitPaymentTerminal();
-            InitTable();
-            InitRow();
-            InitSquare();
             InitRoom();
 
         }
@@ -147,7 +144,8 @@ namespace Model.Room
         }
         public void InitCard(){
             for(int i = 0; i <= 40; i++){
-                Card card = new Card(InitKitchen.menusList, drinkList);
+                //Card card = new Card(InitKitchen.menusList, drinkList);
+                Card card = new Card(null, drinkList);
                 cardList.Add(card);
             }
         }
@@ -158,7 +156,7 @@ namespace Model.Room
             paymentTerminalsList.Add(paymentTerminal2);
 
         }
-        public void InitTable(){
+        public void InitRoom(){
             Table table1 = new Table(10, 1, "free", false);
             Table table2 = new Table(10, 2, "free", false);
             Table table3 = new Table(8, 3, "free", false);
@@ -184,12 +182,11 @@ namespace Model.Room
             tableList.Add(table10);
             tableList.Add(table11);
             tableList.Add(table12);
-        }
-        public void InitRow(){
-            List<Table> tableInRow1 = new List<Table>{table1, table2, table3}();
-            List<Table> tableInRow2 = new List<Table>{table4, table5, table6}();
-            List<Table> tableInRow3 = new List<Table>{table7, table8, table9}();
-            List<Table> tableInRow4 = new List<Table>{table10, table11, table12}();
+
+            List<Table> tableInRow1 = new List<Table>{ table1, table2, table3 };
+            List<Table> tableInRow2 = new List<Table> { table4, table5, table6 };
+            List<Table> tableInRow3 = new List<Table>{ table7, table8,table9 };
+            List<Table> tableInRow4 = new List<Table>{ table10, table11, table12 };
 
             Row row1 = new Row(1, tableInRow1);
             Row row2 = new Row(2, tableInRow2);
@@ -200,17 +197,15 @@ namespace Model.Room
             rowList.Add(row2);
             rowList.Add(row3);
             rowList.Add(row4);
-        }
-        public void InitSquare(){
-            List<Row> rowInSquare1 = new List<Row>{row1, row2}();
-            List<Row> rowInSquare2 = new List<Row>{row3, row4}();
+
+            List<Row> rowInSquare1 = new List<Row>{row1, row2};
+            List<Row> rowInSquare2 = new List<Row>{row3, row4};
             Square square1 = new Square(1, rowInSquare1);
             Square square2 = new Square(2, rowInSquare2);
 
             squareList.Add(square1);
             squareList.Add(square2);
-        }
-        public void InitRoom(){
+
             Room room1 = new Room(1, squareList, paymentTerminalsList);
             roomList.Add(room1);
         }
