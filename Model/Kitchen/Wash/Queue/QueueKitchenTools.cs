@@ -9,11 +9,7 @@ namespace Model.Kitchen
 {
     public class QueueKitchenTools
     {
-        public List<KitchenTool> kitchenToolsList;
+        public List<KitchenTool> kitchenToolsList = new List<KitchenTool>();
 
-        public QueueKitchenTools(List<KitchenTool> kitchenToolsList)
-        {
-            this.kitchenToolsList = kitchenToolsList;
-        }
     }
 }

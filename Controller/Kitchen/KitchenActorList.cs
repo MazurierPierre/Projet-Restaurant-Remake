@@ -21,17 +21,17 @@ namespace Controller.Kitchen
             {
                 lock (padLock)
                 {
-                    if (Instance == null)
+                    if (instance == null)
                         instance = new KitchenActorList();
                     return instance;
                 }
             }
         }
 
-        public List<MainChef> mainChefList { get; set; }
-        public List<Cook> cookList { get; set; }
-        public List<KitchenClerck> kitchenClerkList { get; set; }
-        public List<DishWasher> dishwasherList { get; set; }
+        public List<MainChef> mainChefList { get; set; } = new List<MainChef>();
+        public List<Cook> cookList { get; set; } = new List<Cook>();
+        public List<KitchenClerck> kitchenClerkList { get; set; } = new List<KitchenClerck>();
+        public List<DishWasher> dishwasherList { get; set; } = new List<DishWasher>();
         public MainChef mainChef1 { get; set; } = new MainChef("Emiliano del restaurante");
         public Cook cook1 = new Cook("Gilly el cook");
         public KitchenClerck kitchenClerck1 = new KitchenClerck("Maz el banador");

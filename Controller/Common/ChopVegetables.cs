@@ -32,8 +32,8 @@ namespace Controller.Common
             {
                 OrderTable orderTable = InitKitchen.Instance.orderTable;
 
-                foreach (TMPOrder order in orderTable.orderList) //On consulte tous les order qui sont à faire
-                    foreach (Menu menu in order.listeMenu)
+                foreach (Order order in orderTable.orderList) //On consulte tous les order qui sont à faire
+                    foreach (Menu menu in order.orderList)
                         foreach (Dish dish in menu.dishList)
                             foreach (Instruction instruction in dish.instructionsList)
                                 //wait 

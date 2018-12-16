@@ -26,7 +26,7 @@ namespace Model.Kitchen
             get {
                 lock (padLock)
                 {
-                    if (Instance == null)
+                    if (instance == null)
                         instance = new InitKitchen();
                     return instance;
                 }
@@ -48,20 +48,20 @@ namespace Model.Kitchen
             InitWashMachine(); //Washmachine & overs
             InitCounter(); //Init the counter and places
             InitKitchenObject(); //The kitchen itself
-            InitCommunication();// For receving data stream
+            //InitCommunication();// For receving data stream
         }
 
         /* =====================================INGREDIENT===================================*/
 
-        private List<Ingredient> ingredientForFridge;
+        public List<Ingredient> ingredientForFridge = new List<Ingredient>();
         public Ingredient carrot { get; set; } = new Ingredient("Carrot", EnumKitchen.IngredientsType.Fresh, new DateTime(2018, 1, 18), new DateTime(2018, 1, 30));
         public Ingredient broccoli { get; set; } = new Ingredient("Broccoli", EnumKitchen.IngredientsType.Fresh, new DateTime(2018, 1, 18), new DateTime(2018, 1, 30));
         public Ingredient potato { get; set; } = new Ingredient("Potato", EnumKitchen.IngredientsType.Fresh, new DateTime(2018, 1, 18), new DateTime(2018, 1, 30));
-        private List<Ingredient> ingredientsForSupply;
+        public List<Ingredient> ingredientsForSupply = new List<Ingredient>();
         public Ingredient apple { get; set; } = new Ingredient("Apple", EnumKitchen.IngredientsType.Dry, new DateTime(2018, 1, 18), new DateTime(2018, 1, 30));
         public Ingredient perry { get; set; } = new Ingredient("Perry", EnumKitchen.IngredientsType.Dry, new DateTime(2018, 1, 18), new DateTime(2018, 1, 30));
         public Ingredient rice { get; set; } = new Ingredient("Rice", EnumKitchen.IngredientsType.Dry, new DateTime(2018, 1, 18), new DateTime(2018, 1, 30));
-        private List<Ingredient> ingredientForFreezer;
+        public List<Ingredient> ingredientForFreezer = new List<Ingredient>();
         public Ingredient pasta { get; set; } = new Ingredient("Pasta", EnumKitchen.IngredientsType.Frozen, new DateTime(2018, 1, 18), new DateTime(2018, 1, 30));
         public Ingredient pizza { get; set; } = new Ingredient("Pizza", EnumKitchen.IngredientsType.Frozen, new DateTime(2018, 1, 18), new DateTime(2018, 1, 30));
 
@@ -87,9 +87,9 @@ namespace Model.Kitchen
 
         /* ======================================STORAGE===================================== */
 
-        public List<Supply> supplyList { get; set; }
-        public List<Freezer> freezersList { get; set; }
-        public List<Fridge> fridgesList { get; set; }
+        public List<Supply> supplyList  { get; set; } = new List<Supply>();
+        public List<Freezer> freezersList { get; set; } = new List<Freezer>();
+        public List<Fridge> fridgesList { get; set; } = new List<Fridge>();
         public Supply supply1 { get; set; } = new Supply();
         public Fridge fridge1 { get; set; } = new Fridge();
         public Freezer freezer1 { get; set; } = new Freezer();
@@ -130,8 +130,8 @@ namespace Model.Kitchen
         /* ======================================EQUIPMENT===================================== */
 
         //Equipment
-        public List<Oven> ovensList { get; set; }
-        public List<KitchenFire> kitchenFiresList { get; set; }
+        public List<Oven> ovensList { get; set; } = new List<Oven>();
+        public List<KitchenFire> kitchenFiresList { get; set; } = new List<KitchenFire>();
         public Oven oven1 { get; set; } = new Oven("Oven1");
         public Oven oven2 { get; set; } = new Oven("Oven2");
         public KitchenFire kf1 { get; set; } = new KitchenFire("kf1");
@@ -149,11 +149,11 @@ namespace Model.Kitchen
 
         /* ======================================COOKING===================================== */
         //List
-        public List<KitchenAction> kitchenActionsList { get; set; }
-        public List<KitchenTool> kitchenToolsList { get; set; }
+        public List<KitchenAction> kitchenActionsList { get; set; } = new List<KitchenAction>();
+        public List<KitchenTool> kitchenToolsList { get; set; } = new List<KitchenTool>();
 
-        public List<Dish> dishesList { get; set; }
-        public List<Menu> menusList { get; set; }
+        public List<Dish> dishesList { get; set; } = new List<Dish>();
+        public List<Menu> menusList { get; set; } = new List<Menu>();
         //KitchenAction
         public KitchenAction cut { get; set; } = new KitchenAction("cut", 5);
         public KitchenAction slice { get; set; } = new KitchenAction("slice", 5);
@@ -176,7 +176,7 @@ namespace Model.Kitchen
         //Dessert ?
         public Menu menu1 { get; set; }
 
-        public List<Tuple<Dish, int>> dishReady { get; set; } // List qui va servir de transition quand un plat est finis de cuisiner
+        public List<Tuple<Dish, int>> dishReady { get; set; } = new List<Tuple<Dish,int>>(); // List qui va servir de transition quand un plat est finis de cuisiner
 
         public void InitToolsAndActions()
         {
@@ -225,13 +225,14 @@ namespace Model.Kitchen
             };
 
             menu1 = new Menu("Menu 1 - Cooked Carrot", listDishForMenu1, true);
+            menusList.Add(menu1);
         }
 
         /* ======================================WASH===================================== */
-        public List<QueueKitchenTools> queueKitchenToolsList { get; set; }
-        public List<QueueRoomStuff> queueRoomToolsStuff { get; set; }
+        public List<QueueKitchenTools> queueKitchenToolsList { get; set; } = new List<QueueKitchenTools>();
+        public List<QueueRoomStuff> queueRoomToolsStuff { get; set; } = new List<QueueRoomStuff>();
 
-        public QueueKitchenTools qkt1 { get; set; } = new QueueKitchenTools(null);
+        public QueueKitchenTools qkt1 { get; set; } = new QueueKitchenTools();
         public QueueRoomStuff qrts1 { get; set; } = new QueueRoomStuff();// ==> Waiting gilly
 
         public void InitQueue()
@@ -240,9 +241,9 @@ namespace Model.Kitchen
             queueRoomToolsStuff.Add(qrts1);
         }
 
-        public List<Sink> sinksList { get; set; }
-        public List<DishwasherMachine> dishwasherMachinesList { get; set; }
-        public List<WashingMachine> washingMachinesList { get; set; }
+        public List<Sink> sinksList { get; set; } = new List<Sink>();
+        public List<DishwasherMachine> dishwasherMachinesList { get; set; } = new List<DishwasherMachine>();
+        public List<WashingMachine> washingMachinesList { get; set; } = new List<WashingMachine>();
         public Sink sink1 { get; set; } = new Sink();
         public Sink sink2 { get; set; } = new Sink();
         public DishwasherMachine dishwasherMachine1 { get; set; } = new DishwasherMachine();
@@ -263,10 +264,10 @@ namespace Model.Kitchen
         public Counter counter { get; set; } = new Counter();
         public void InitCounter()
         {
-            for (int i = 1; i < 16; i++)
+            /*for (int i = 1; i < 16; i++)
             {
                 counter.mapCounter.Add(0, null); //Place libre de counter
-            }
+            }*/
             
         }
 

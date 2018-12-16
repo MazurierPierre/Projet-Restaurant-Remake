@@ -14,12 +14,35 @@ namespace Controller.Common
 {
     public class BringMealToCounter : IAct
     {
-
+        Boolean plateISPlaced = false;
         public void act()
         {
             Counter c = InitKitchen.Instance.counter;
-            Boolean hasAPlace = false;
-            foreach (Tuple<Dish, int> tupleCommand in InitKitchen.Instance.dishReady)
+            var tupleCommandist = InitKitchen.Instance.dishReady;
+            foreach (Tuple<Dish, int> tupleCommand in tupleCommandist)
+            {
+                plateISPlaced = false;
+                if (!c.isTabFull())
+                {
+                    for (int i = 0; i < c.tabDish.Length; i++) //On place un élement
+                    {
+                        if (c.tabDish[i] == null && !plateISPlaced) //Un espace vide
+                        {
+                            c.tabDish[i] = tupleCommand.Item1; //Association du plat
+                            c.tableNumber[i] = tupleCommand.Item2; //Numéro de table 
+                            plateISPlaced = true;
+                        }
+                    }
+                }
+            }
+            //Notify serveur here
+        }
+
+
+
+            /* ======================================== Ancien code =====================================================*/
+
+            /*foreach (Tuple<Dish, int> tupleCommand in InitKitchen.Instance.dishReady)
             {
                 hasAPlace = false; 
                 foreach (KeyValuePair<int, Dish> counterPlace in c.mapCounter)  //vérification qu'il y a de la place sur le comptoir
@@ -35,8 +58,8 @@ namespace Controller.Common
                 {
                     // La map est full - Alerte quelqu'un !
                 }
-            }
-        }
+            }*/
+        
 
         public void act(Client client, Table table)
         {

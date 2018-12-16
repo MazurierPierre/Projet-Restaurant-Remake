@@ -32,14 +32,29 @@ namespace Controller.Common
             {
                 OrderTable orderTable = InitKitchen.Instance.orderTable;
 
-                foreach (TMPOrder order in orderTable.orderList) //On consulte tous les order qui sont à faire
-                    foreach (Menu menu in order.listeMenu)
+                foreach (Order order in orderTable.orderList)//On consulte tous les order qui sont à faire
+                { 
+                    foreach (Menu menu in order.orderList)
+                    {
                         foreach (Dish dish in menu.dishList)
+                        {
                             foreach (Instruction instruction in dish.instructionsList)
-                                //wait 
-                                //instruction.kitchenAction.duration()
-                                dishreturn = new Dish(dish.name, dish.description, dish.instructionsList, dish.dishType, EnumKitchen.DishState.OK);
-                                InitKitchen.Instance.dishReady.Add(new Tuple<Dish, int>(dishreturn, 1));
+                            {
+                                //wait le temps de l'instruction
+                                
+                                foreach(KitchenTool kt in instruction.kitchenToolsList)
+                                {
+                                    kt.KitchenToolsType = EnumKitchen.KitchenToolsType.Dirt;
+                                    //InitKitchen.Instance.kitchenToolsList.Remove(kt);
+                                    InitKitchen.Instance.qkt1.kitchenToolsList.Add(kt);
+                                }
+                                
+                            }
+                            dishreturn = new Dish(dish.name, dish.description, dish.instructionsList, dish.dishType, EnumKitchen.DishState.OK);
+                            InitKitchen.Instance.dishReady.Add(new Tuple<Dish, int>(dishreturn, 1));
+                        }
+                    }
+                }
 
             }
         }

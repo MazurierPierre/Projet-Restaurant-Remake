@@ -10,12 +10,12 @@ namespace Model.Kitchen.Wash.Machines
 {
     public abstract class WashingKitchenTools : WashMachine
     {
-        public List<KitchenTool> itemToWashList { get; set; }
+        public List<KitchenTool> itemToWashList { get; set; } = new List<KitchenTool>();
         protected WashingKitchenTools(int washTime, int maxCapacity)
         {
 
         }
-         public void addToWash(QueueKitchenTools qkt)
+         public virtual void addToWash(QueueKitchenTools qkt)
          {
              Boolean tmp = false;
              while (tmp == false)
@@ -23,7 +23,7 @@ namespace Model.Kitchen.Wash.Machines
                  foreach (KitchenTool tool in qkt.kitchenToolsList)
                  {
                      if (!this.itemToWashList.Any()) { this.itemToWashList.Add(tool); } //premier passage
-                     if (this.itemToWashList.Count <= this.maxCapacity)
+                     if (this.itemToWashList.Count <= 5) //5 en dur pour le moment
                      {
                          this.itemToWashList.Add(tool);
                          //retirer de la queue 
@@ -51,7 +51,8 @@ namespace Model.Kitchen.Wash.Machines
              if (!this.itemToWashList.Any()) { return; } //Liste vide ou moins d'élements que prévu ==> Arrêt machine (même si durée ne change pas)
              foreach (KitchenTool tw in itemToWashList)
              {
-                 tw.KitchenToolsType = EnumKitchen.KitchenToolsType.OK;
+                    tw.KitchenToolsType = EnumKitchen.KitchenToolsType.OK;
+                    InitKitchen.Instance.kitchenToolsList.Add(tw);
              }
              endWash();
              this.isRunning = false;
