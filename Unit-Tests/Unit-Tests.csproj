@@ -82,7 +82,7 @@
       <Project>{579fe5ea-eed1-43e2-8eef-9a92f08af1d2}</Project>
       <Name>Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Projet-Restaurant-Remake\View.csproj">
+    <ProjectReference Include="..\View\View.csproj">
       <Project>{7c7e4609-3320-4a81-8b1b-d2cfe7e52787}</Project>
       <Name>View</Name>
     </ProjectReference>
